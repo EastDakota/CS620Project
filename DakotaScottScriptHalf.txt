@@ -1,0 +1,25 @@
+With average precision and recall values of 0.348 (Table 1), this model is overall is more likely to predict the correct borough in which a crime took place, as compared to a random guess 0.2. 
+this model is generally more accurate than randomly choosing a borough, this is not the case for Staten Island predictions in which the precision and recall, 0.18 and 0.16, respectively, are less than random chance. 
+This is likely due to a lack of sample size within this category likely lead to an inability to discern unique patterns. 
+In all borough predictions except for those of Staten Island, the likelihood of a correct prediction was almost twice that of random chance. However, when discussing the results for the Staten Island predictions, this value drops to less than that of random chance. This changes the odds of choosing the correct borough from approximately 1/5 to 1/3. 
+Another concern in this process is the possible feedback loop that this data can create. The Police collect the data and then if this data is then factored into a machine learning model, it will likely compound on the already illustrated trends in the data. 
+For example, an over presence in Manhattan may lead to many more instances of Manhattan showing up in the arrest record dataset. If the model is then trained on said dataset, it will be fed an inaccurate picture of crime in New York, would likely identify Manhattan far more often and thus justify heavier police presence in Manhattan. 
+
+From the beginning of this project, we set out to create a model that can accurately predict the borough in which a crime took place given a description of the criminal and crime. To be accurate, we have defined it to mean more often correct than not or demonstrating an accuracy greater than 50%. 
+Given this definition of success, we were not able to create an accurate model. In future experiments, a more sophisticated model type may be included such as a Convolutional Neural Network, as well, a larger data sample size would be helpful in creating a more accurate representation of crime and crime trends. 
+
+
+References
+Table 1.) Precision, Recall, and F-Scores for Decision Tree Classifier, (Depth = 38)
+Borough	Bronx	Brooklyn	Manhattan	Queens	Staten Island	Avg
+Precision	0.40	0.39	0.39	0.38	0.18	0.348
+Recall	0.39	0.42	0.39	0.38	0.16	0.348
+F-Scores	0.38	0.41	0.39	0.38	0.17	0.346
+
+Figure 1.) Confusion Matrix of Decision tree Max_depth = 38
+ 
+Sources
+1.	Thompson A, Baquero M, English D, Calvo M, Martin-Howard S, Rowell-Cunsolo T, Garretson M, Brahmbhatt D. 
+Associations between Experiences of Police Contact and Discrimination by the Police and Courts and Health Outcomes in a Representative Sample of Adults in New York City. J Urban Health. 2021 Dec;98(6):727-741. 
+doi: 10.1007/s11524-021-00583-6. Epub 2021 Nov 22. PMID: 34811698; PMCID: PMC8688626.
+
